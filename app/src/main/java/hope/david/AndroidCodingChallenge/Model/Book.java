@@ -1,17 +1,36 @@
 package hope.david.AndroidCodingChallenge.Model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
+import javax.annotation.Nullable;
+
 /**
  * Created by davidhope on 12/31/17.
  */
 
 public class Book {
 
-    String title;
-    String imageUrl;
+    @SerializedName("title")
+    @Expose
+    private String title;
+    @SerializedName("imageURL")
+    @Expose
+    private String imageURL;
+    @SerializedName("author")
+    @Expose
+    private String author;
 
-    public Book(String title, String imageUrl) {
+
+    /**
+     * @param author
+     * @param title
+     * @param imageURL
+     */
+    public Book(String title, String imageURL, @Nullable String author) {
         this.title = title;
-        this.imageUrl = imageUrl;
+        this.imageURL = imageURL;
+        this.author = author;
     }
 
     public String getTitle() {
@@ -22,11 +41,20 @@ public class Book {
         this.title = title;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public String getImageURL() {
+        return imageURL;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
     }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
 }

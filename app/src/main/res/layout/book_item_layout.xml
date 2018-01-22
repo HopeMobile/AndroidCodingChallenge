@@ -2,13 +2,44 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
               android:orientation="horizontal"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content">
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp">
 
-<ImageView
- android:layout_width="match_parent"
- android:layout_height="wrap_content"
- android:id="@+id/bookIcon"
-/>
+
+        <ImageView
+            android:id="@+id/book_icon_image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="start"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/book_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/colorPrimaryText"
+            android:layout_gravity="center_vertical"
+            tools:text="How I Learned to be a Cynical Sports Fan: Tales from a native Georgian"/>
+
+        <TextView
+            android:id="@+id/book_author_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/colorPrimaryText"
+            android:layout_gravity="bottom"
+            tools:text="Author: David Hope"/>
+
+    </LinearLayout>
+
 
 </LinearLayout>
